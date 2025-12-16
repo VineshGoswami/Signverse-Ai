@@ -1,0 +1,11 @@
+opencv-python
+mediapipe
+torch
+torchvision
+torchaudio
+numpy
+scikit-learn
+pyttsx3
+pyautogui
+SpeechRecognition
+pyaudio

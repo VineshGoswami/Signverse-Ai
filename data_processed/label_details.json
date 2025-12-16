@@ -1,0 +1,242 @@
+{
+  "0": {
+    "lang": "ISL",
+    "class_name": "A"
+  },
+  "1": {
+    "lang": "ISL",
+    "class_name": "B"
+  },
+  "2": {
+    "lang": "ISL",
+    "class_name": "C"
+  },
+  "3": {
+    "lang": "ISL",
+    "class_name": "D"
+  },
+  "4": {
+    "lang": "ISL",
+    "class_name": "E"
+  },
+  "5": {
+    "lang": "ISL",
+    "class_name": "F"
+  },
+  "6": {
+    "lang": "ISL",
+    "class_name": "G"
+  },
+  "7": {
+    "lang": "ISL",
+    "class_name": "I"
+  },
+  "8": {
+    "lang": "ISL",
+    "class_name": "K"
+  },
+  "9": {
+    "lang": "ISL",
+    "class_name": "L"
+  },
+  "10": {
+    "lang": "ISL",
+    "class_name": "M"
+  },
+  "11": {
+    "lang": "ISL",
+    "class_name": "N"
+  },
+  "12": {
+    "lang": "ISL",
+    "class_name": "O"
+  },
+  "13": {
+    "lang": "ISL",
+    "class_name": "P"
+  },
+  "14": {
+    "lang": "ISL",
+    "class_name": "Q"
+  },
+  "15": {
+    "lang": "ISL",
+    "class_name": "R"
+  },
+  "16": {
+    "lang": "ISL",
+    "class_name": "S"
+  },
+  "17": {
+    "lang": "ISL",
+    "class_name": "T"
+  },
+  "18": {
+    "lang": "ISL",
+    "class_name": "U"
+  },
+  "19": {
+    "lang": "ISL",
+    "class_name": "V"
+  },
+  "20": {
+    "lang": "ISL",
+    "class_name": "W"
+  },
+  "21": {
+    "lang": "ISL",
+    "class_name": "X"
+  },
+  "22": {
+    "lang": "ISL",
+    "class_name": "Z"
+  },
+  "23": {
+    "lang": "ASL",
+    "class_name": "0"
+  },
+  "24": {
+    "lang": "ASL",
+    "class_name": "1"
+  },
+  "25": {
+    "lang": "ASL",
+    "class_name": "2"
+  },
+  "26": {
+    "lang": "ASL",
+    "class_name": "3"
+  },
+  "27": {
+    "lang": "ASL",
+    "class_name": "4"
+  },
+  "28": {
+    "lang": "ASL",
+    "class_name": "5"
+  },
+  "29": {
+    "lang": "ASL",
+    "class_name": "6"
+  },
+  "30": {
+    "lang": "ASL",
+    "class_name": "7"
+  },
+  "31": {
+    "lang": "ASL",
+    "class_name": "8"
+  },
+  "32": {
+    "lang": "ASL",
+    "class_name": "9"
+  },
+  "33": {
+    "lang": "ASL",
+    "class_name": "a"
+  },
+  "34": {
+    "lang": "ASL",
+    "class_name": "asl_dataset"
+  },
+  "35": {
+    "lang": "ASL",
+    "class_name": "b"
+  },
+  "36": {
+    "lang": "ASL",
+    "class_name": "c"
+  },
+  "37": {
+    "lang": "ASL",
+    "class_name": "d"
+  },
+  "38": {
+    "lang": "ASL",
+    "class_name": "e"
+  },
+  "39": {
+    "lang": "ASL",
+    "class_name": "f"
+  },
+  "40": {
+    "lang": "ASL",
+    "class_name": "g"
+  },
+  "41": {
+    "lang": "ASL",
+    "class_name": "h"
+  },
+  "42": {
+    "lang": "ASL",
+    "class_name": "i"
+  },
+  "43": {
+    "lang": "ASL",
+    "class_name": "j"
+  },
+  "44": {
+    "lang": "ASL",
+    "class_name": "k"
+  },
+  "45": {
+    "lang": "ASL",
+    "class_name": "l"
+  },
+  "46": {
+    "lang": "ASL",
+    "class_name": "m"
+  },
+  "47": {
+    "lang": "ASL",
+    "class_name": "n"
+  },
+  "48": {
+    "lang": "ASL",
+    "class_name": "o"
+  },
+  "49": {
+    "lang": "ASL",
+    "class_name": "p"
+  },
+  "50": {
+    "lang": "ASL",
+    "class_name": "q"
+  },
+  "51": {
+    "lang": "ASL",
+    "class_name": "r"
+  },
+  "52": {
+    "lang": "ASL",
+    "class_name": "s"
+  },
+  "53": {
+    "lang": "ASL",
+    "class_name": "t"
+  },
+  "54": {
+    "lang": "ASL",
+    "class_name": "u"
+  },
+  "55": {
+    "lang": "ASL",
+    "class_name": "v"
+  },
+  "56": {
+    "lang": "ASL",
+    "class_name": "w"
+  },
+  "57": {
+    "lang": "ASL",
+    "class_name": "x"
+  },
+  "58": {
+    "lang": "ASL",
+    "class_name": "y"
+  },
+  "59": {
+    "lang": "ASL",
+    "class_name": "z"
+  }
+}
