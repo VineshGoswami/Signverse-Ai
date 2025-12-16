@@ -178,67 +178,27 @@ def init_pygame_window(size=(960, 700)):
 # ------------------------- Token mapping (labels -> actions/words) ------------------------- #
 
 TOKEN_MAP = {
-    # Text tokens
-    "ISL_A": "hello",
-    "ASL_A": "hello",
-    "ISL_B": "yes",
-    "ASL_B": "yes",
-    "ISL_C": "no",
-    "ASL_C": "no",
-    "ISL_D": "please",
-    "ASL_D": "please",
-    "ISL_E": "thanks",
-    "ASL_E": "thanks",
+    "ISL_Z": "[MOUSE_TOGGLE]",
+    "ASL_Z": "[MOUSE_TOGGLE]",
 
-    # Control tokens
-    "ISL_F": "[SPACE]",
-    "ASL_F": "[SPACE]",
-    "ISL_G": "[BACKSPACE]",
-    "ASL_G": "[BACKSPACE]",
-    "ISL_H": "[CLEAR]",
-    "ASL_H": "[CLEAR]",
-    "ISL_I": "[SUBMIT]",
-    "ASL_I": "[SUBMIT]",
+    "ISL_T": "[LEFT_CLICK]",
+    "ASL_T": "[LEFT_CLICK]",
 
-    # Mouse control tokens
-    "ISL_J": "[MOUSE_TOGGLE]",
-    "ASL_J": "[MOUSE_TOGGLE]",
-    "ISL_K": "[LEFT_CLICK]",
-    "ASL_K": "[LEFT_CLICK]",
-    "ISL_L": "[RIGHT_CLICK]",
-    "ASL_L": "[RIGHT_CLICK]",
+    "ISL_R": "[RIGHT_CLICK]",
+    "ASL_R": "[RIGHT_CLICK]",
 
-    "ISL_M": "[OPEN_CHROME]",
-    "ISL_N": "[SEARCH_GOOGLE]",
-    "ISL_O": "[OPEN_VSCODE]",
-    "ISL_P": "[OPEN_EXPLORER]",
-    "ISL_Q": "[SCROLL_UP]",
-    "ISL_R": "[SCROLL_DOWN]",
-    "ISL_S": "[ALT_TAB]",
-    "ISL_T": "[CLOSE_APP]"
+    "ISL_A": "[SCROLL_UP]",
+    "ASL_A": "[SCROLL_UP]",
+
+    "ISL_Q": "[SCROLL_DOWN]",
+    "ASL_Q": "[SCROLL_DOWN]",
 }
+
 
 
 def handle_token(text_buffer, tts, mouse, token):
 
-    # ---------- TEXT ----------
-    if token == "[SPACE]":
-        text_buffer.add_token("")
-
-    elif token == "[BACKSPACE]":
-        text_buffer.backspace()
-
-    elif token == "[CLEAR]":
-        text_buffer.clear()
-
-    elif token == "[SUBMIT]":
-        sentence = text_buffer.get_sentence().strip()
-        if sentence:
-            tts.speak(sentence)
-        text_buffer.clear()
-
-    # ---------- MOUSE ----------
-    elif token == "[MOUSE_TOGGLE]":
+    if token == "[MOUSE_TOGGLE]":
         mouse.toggle()
 
     elif token == "[LEFT_CLICK]":
@@ -248,37 +208,11 @@ def handle_token(text_buffer, tts, mouse, token):
         mouse.right_click()
 
     elif token == "[SCROLL_UP]":
-        pyautogui.scroll(300)
+        mouse.scroll_up()
 
     elif token == "[SCROLL_DOWN]":
-        pyautogui.scroll(-300)
+        mouse.scroll_down()
 
-    # ---------- SYSTEM / APPS ----------
-    elif token == "[OPEN_CHROME]":
-        os.system("start chrome")
-
-    elif token == "[OPEN_VSCODE]":
-        os.system("code")
-
-    elif token == "[OPEN_EXPLORER]":
-        os.system("explorer")
-
-    elif token == "[ALT_TAB]":
-        pyautogui.hotkey("alt", "tab")
-
-    elif token == "[CLOSE_APP]":
-        pyautogui.hotkey("alt", "f4")
-
-    # ---------- SEARCH ----------
-    elif token == "[SEARCH_GOOGLE]":
-        query = text_buffer.get_sentence()
-        if query:
-            webbrowser.open(f"https://www.google.com/search?q={query}")
-        text_buffer.clear()
-
-    # ---------- NORMAL WORD ----------
-    else:
-        text_buffer.add_token(token)
 
 
 

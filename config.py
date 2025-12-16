@@ -39,7 +39,7 @@ NUM_LAYERS = 2
 DROPOUT = 0.3
 
 # Live inference smoothing
-PREDICTION_SMOOTHING = 5  # number of consecutive same predictions before accepting
+PREDICTION_SMOOTHING = 10  # number of consecutive same predictions before accepting
 
 # TTS
 TTS_ENABLED = True
