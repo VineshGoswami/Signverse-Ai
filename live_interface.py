@@ -267,6 +267,15 @@ def main():
                     print("[INFO] Backspace (key B).")
                 elif event.key == pygame.K_m:
                     mouse.toggle()
+                elif event.key == pygame.K_d:
+                    mouse.double_click()
+                    print("[INFO] Double Click (key D).")
+                elif event.key == pygame.K_l:
+                    mouse.left_click()
+                    print("[INFO] Left Click (key L).")
+                elif event.key == pygame.K_r:
+                    mouse.right_click()
+                    print("[INFO] Right Click (key R).")
 
         # ---- Webcam frame ----
         try:
@@ -303,6 +312,9 @@ def main():
             index_tip = hand_landmarks.landmark[8]
             index_tip_x_norm = index_tip.x
             index_tip_y_norm = index_tip.y
+
+            # Process real-time pinch gestures (Left click, Double click, Right click)
+            mouse.process_hand_gestures(lm_list)
 
             if feature_vec.shape[0] != FEATURE_DIM:
                 print(f"[WARN] Unexpected feature size: {feature_vec.shape}")
@@ -357,10 +369,10 @@ def main():
             screen.blit(surf, (10, y_pos))
             return y_pos + 24
 
-        y = draw_text(f"Last label: {pred_label if pred_label else '-'} (conf={confidence:.2f})", y)
-        y = draw_text(f"Mouse mode: {'ON' if mouse.enabled else 'OFF'}", y, (255, 200, 0))
-        y = draw_text(f"Text buffer: {text_buffer.get_sentence()}", y, (0, 255, 255))
-        y = draw_text("Keys: Q/Esc=Quit, C=Clear, B=Backspace, M=Toggle mouse", y, (200, 200, 200))
+        y = draw_text(f"Last Sign Label: {pred_label if pred_label else '-'} (conf={confidence:.2f})", y)
+        y = draw_text(f"Mouse Status: {'ACTIVE' if mouse.enabled else 'DISABLED'} | Action: {mouse.current_gesture_status}", y, (0, 255, 0) if mouse.enabled else (255, 100, 100))
+        y = draw_text("Gestures: Palm=Mouse ON | Fist=Mouse OFF | Pinch=Left Click | 3-Pinch/2-Pinch=Double Click", y, (0, 220, 255))
+        y = draw_text("Keys: M=Toggle Mouse, D=Double Click, C=Clear, Q=Quit", y, (200, 200, 200))
 
         pygame.display.flip()
         clock.tick(20)
